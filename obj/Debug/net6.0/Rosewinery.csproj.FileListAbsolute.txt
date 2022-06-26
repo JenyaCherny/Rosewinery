@@ -1,0 +1,15 @@
+C:\Users\Jenya\source\repos\Rosewinery\obj\Debug\net6.0\Rosewinery.csproj.AssemblyReference.cache
+C:\Users\Jenya\source\repos\Rosewinery\obj\Debug\net6.0\Rosewinery.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jenya\source\repos\Rosewinery\obj\Debug\net6.0\Rosewinery.AssemblyInfoInputs.cache
+C:\Users\Jenya\source\repos\Rosewinery\obj\Debug\net6.0\Rosewinery.AssemblyInfo.cs
+C:\Users\Jenya\source\repos\Rosewinery\obj\Debug\net6.0\Rosewinery.csproj.CoreCompileInputs.cache
+C:\Users\Jenya\source\repos\Rosewinery\bin\Debug\net6.0\Rosewinery.exe
+C:\Users\Jenya\source\repos\Rosewinery\bin\Debug\net6.0\Rosewinery.deps.json
+C:\Users\Jenya\source\repos\Rosewinery\bin\Debug\net6.0\Rosewinery.runtimeconfig.json
+C:\Users\Jenya\source\repos\Rosewinery\bin\Debug\net6.0\Rosewinery.dll
+C:\Users\Jenya\source\repos\Rosewinery\bin\Debug\net6.0\Rosewinery.pdb
+C:\Users\Jenya\source\repos\Rosewinery\obj\Debug\net6.0\Rosewinery.dll
+C:\Users\Jenya\source\repos\Rosewinery\obj\Debug\net6.0\refint\Rosewinery.dll
+C:\Users\Jenya\source\repos\Rosewinery\obj\Debug\net6.0\Rosewinery.pdb
+C:\Users\Jenya\source\repos\Rosewinery\obj\Debug\net6.0\Rosewinery.genruntimeconfig.cache
+C:\Users\Jenya\source\repos\Rosewinery\obj\Debug\net6.0\ref\Rosewinery.dll
