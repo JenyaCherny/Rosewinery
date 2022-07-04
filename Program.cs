@@ -25,16 +25,30 @@ public class Program
         } while (menuchoice != "4");
 
         int length = 6;
-        WineInventory [] inventory = new WineInventory[length];
+        //Wineinventory[]
+        //WineInventory inventory = new WineInventory();
+        string json = "{Wine Name: Chardonnay 2016, " +
+            "Description: A creamy and flavourful medium-bodied wine, it’s full and well-rounded with plenty of intense, fruity notes, " +
+            "Quantity:10, " +
+            "Supplier Name: Grgich Hills Estate, " +
+            "Price: $40}";
+
+
+        Wineinventory[] array = new Wineinventory[1];
+        array[0] = new Wineinventory();
+        array[0].WineName = "Chardonnay 2016";
+
+        Console.WriteLine(array[0].WineName);
 
         string FilePath = @"./WineDescription.json";
-        using (FileStream sourceStream = File.OpenRead(FilePath))
-        {
+        //using (FileStream sourceStream = File.OpenRead(FilePath)) { 
+        string ReadText = File.ReadAllText(FilePath);
+        //Console.WriteLine(ReadText);
 
-            Console.WriteLine(System.Text.Json.JsonSerializer.Deserialize<WineInventory>(sourceStream));
-        }
+        // Console.WriteLine(System.Text.Json.JsonSerializer.Deserialize<WineInventory>(sourceStream));
 
-       // Console.WriteLine(inventory[1].WineName);
+        // Console.WriteLine(inventory[1].WineName);
+        
             
 
 
