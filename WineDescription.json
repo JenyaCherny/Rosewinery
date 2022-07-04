@@ -1,0 +1,47 @@
+{
+  "WineInventoryList": [
+
+    {
+      "Wine Name": "Malbec 2016",
+      "Description": "Featuring aromas of roses and pine needles with hints of spice and tobacco",
+      "Quantity": "5",
+      "Supplier Name": "Zapata Adrianna Vineyard",
+      "Price": "$45"
+    },
+    {
+      "Wine Name": "Syrah 2006",
+      "Description": "It offers an aroma of blueberry pie, blackberries, Asian spices and forest floor with a hint of chocolate",
+      "Quantity": "3",
+      "Supplier Name": "Sine Qua Non",
+      "Price": "$35"
+    },
+    {
+      "Wine Name": "Chardonnay 2016",
+      "Description": "A creamy and flavourful medium-bodied wine, it’s full and well-rounded with plenty of intense, fruity notes",
+      "Quantity": "10",
+      "Supplier Name": "Grgich Hills Estate",
+      "Price": "$40"
+    },
+    {
+      "Wine Name": "Cabernet Sauvignon 2016",
+      "Description": "A range of firm, deep and rich flavours like spring flowers, graphite, creme de cassis, kirsch and liquorice",
+      "Quantity": "10 ",
+      "Supplier Name": "Screaming Eagle",
+      "Price": "$39"
+    },
+    {
+      "Wine Name": "Cabernet Sauvignon 2014",
+      "Description": "Strong flavours of sweet black fruit, fresh red plum and a touch of warm vanilla, it’s a smooth and classic red wine",
+      "Quantity": "8",
+      "Supplier Name": "Heitz Cellar",
+      "Price": "$56"
+    },
+    {
+      "Wine Name": " ",
+      "Description": " ",
+      "Quantity": " ",
+      "Supplier Name": " ",
+      "Price": " "
+    }
+  ]
+}

@@ -13,3 +13,4 @@ C:\Users\Jenya\source\repos\Rosewinery\obj\Debug\net6.0\refint\Rosewinery.dll
 C:\Users\Jenya\source\repos\Rosewinery\obj\Debug\net6.0\Rosewinery.pdb
 C:\Users\Jenya\source\repos\Rosewinery\obj\Debug\net6.0\Rosewinery.genruntimeconfig.cache
 C:\Users\Jenya\source\repos\Rosewinery\obj\Debug\net6.0\ref\Rosewinery.dll
+C:\Users\Jenya\source\repos\Rosewinery\bin\Debug\net6.0\WineDescription.json

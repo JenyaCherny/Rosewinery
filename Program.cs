@@ -3,7 +3,7 @@ using System;
 
 public class Program
 {
-    public static void Main (string[] args)
+    public static void Main(string[] args)
     {
         string menuchoice;
         do
@@ -23,6 +23,22 @@ public class Program
             Console.WriteLine("\n You have chosen menu option #" + menuchoice);
 
         } while (menuchoice != "4");
+
+        int length = 6;
+        WineInventory [] inventory = new WineInventory[length];
+
+        string FilePath = @"./WineDescription.json";
+        using (FileStream sourceStream = File.OpenRead(FilePath))
+        {
+
+            Console.WriteLine(System.Text.Json.JsonSerializer.Deserialize<WineInventory>(sourceStream));
+        }
+
+       // Console.WriteLine(inventory[1].WineName);
+            
+
+
+
     }
 
 }
