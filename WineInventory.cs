@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class InvetoryList
+
+public class Rootobject
 {
-    public Wineinventory[] WineInventory { get; set; }
+    public Class1[] Wineinventory { get; set; }
 }
 
-public class Wineinventory
+public class Class1
 {
     public string WineName { get; set; }
     public string Description { get; set; }
@@ -17,3 +18,4 @@ public class Wineinventory
     public string SupplierName { get; set; }
     public string Price { get; set; }
 }
+

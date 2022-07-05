@@ -1,10 +1,17 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
+using System.Collections.Generic;
+
 
 public class Program
 {
     public static void Main(string[] args)
     {
+
+        string FilePath = @"./WineDescription.json";
+        string ReadText = File.ReadAllText(FilePath);
+
+        List<Class1> inventory = System.Text.Json.JsonSerializer.Deserialize<List<Class1>>(ReadText);
         string menuchoice;
         do
         {
@@ -21,35 +28,64 @@ public class Program
             //}
 
             Console.WriteLine("\n You have chosen menu option #" + menuchoice);
+            //Add code to call menu option #1 here
+            //Add code to call menu option #2 here
 
-        } while (menuchoice != "4");
+            if (menuchoice == "3")
+            {
+                ReadText = File.ReadAllText(FilePath);
+                Console.WriteLine(ReadText);
 
-        int length = 6;
-        //Wineinventory[]
-        //WineInventory inventory = new WineInventory();
-        string json = "{Wine Name: Chardonnay 2016, " +
-            "Description: A creamy and flavourful medium-bodied wine, it’s full and well-rounded with plenty of intense, fruity notes, " +
-            "Quantity:10, " +
-            "Supplier Name: Grgich Hills Estate, " +
-            "Price: $40}";
+            }
+            else if (menuchoice == "2")
+            {
+                Console.WriteLine("Please choose Wine Name");
+                string UserWineChoice = Console.ReadLine();
+
+                foreach (Class1 item in inventory)
+                {
+                    if (item.WineName == UserWineChoice)
+                    {
+                        Console.WriteLine("Wine Name: " + item.WineName);
+                        Console.WriteLine(item.Description);
+                        Console.WriteLine(item.Quantity);
+                        Console.WriteLine(item.SupplierName);
+                        Console.WriteLine(item.Price);
+                    }
+                }
+            }
+            else if (menuchoice == "1")
+            {
+                Class1 item = new Class1();
+
+                Console.WriteLine("Please enter Wine Name");
+                item.WineName = Console.ReadLine();
+
+                Console.WriteLine("Please enter Wine Description");
+                item.Description = Console.ReadLine();
+
+                Console.WriteLine("Please enter Quantity");
+                item.Quantity = Console.ReadLine();
+
+                Console.WriteLine("Please enter Supplier Name");
+                item.SupplierName = Console.ReadLine();
+
+                Console.WriteLine("Please enter Price");
+                item.Price = Console.ReadLine();
+
+                inventory.Add(item);
+                var json = System.Text.Json.JsonSerializer.Serialize<List<Class1>>(inventory);
+                File.WriteAllText(FilePath, json);
+            }
+
+            } while (menuchoice != "4");
 
 
-        Wineinventory[] array = new Wineinventory[1];
-        array[0] = new Wineinventory();
-        array[0].WineName = "Chardonnay 2016";
+      
+       
+       
 
-        Console.WriteLine(array[0].WineName);
 
-        string FilePath = @"./WineDescription.json";
-        //using (FileStream sourceStream = File.OpenRead(FilePath)) { 
-        string ReadText = File.ReadAllText(FilePath);
-        //Console.WriteLine(ReadText);
-
-        // Console.WriteLine(System.Text.Json.JsonSerializer.Deserialize<WineInventory>(sourceStream));
-
-        // Console.WriteLine(inventory[1].WineName);
-        
-            
 
 
 
