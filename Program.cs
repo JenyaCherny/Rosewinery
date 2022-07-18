@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class Program
 {
-    public static void ErrorLogging(string error) //Handles any errors when a user choses invalid menu option and logs them 
+    public static void ErrorLogging(string error) //Handles errors when a user choses invalid menu option and logs them 
     {
 
         using (StreamWriter W = File.AppendText(@"./Error.txt"))
