@@ -5,20 +5,22 @@ using System.Collections.Generic;
 
 public class Program
 {
-    public static void ErrorLogging(string error) //Handles errors when a user choses invalid menu option and logs them 
+    //Handles errors when a user choses invalid menu option and logs them
+    public static void ErrorLogging(string error) 
     {
 
         using (StreamWriter W = File.AppendText(@"./Error.txt"))
         {
             W.WriteLine(error);
         }
-        Console.WriteLine("An error is logged");
+        Console.WriteLine("Try again ");
        
     }
 
     public static void Main(string[] args)
     {
-            using (File.Create(@"./Error.txt")) { }//Creating a new error file to log and closing it
+        //Creating a new error file to log and closing it
+        using (File.Create(@"./Error.txt")) { }
 
             string FilePath = @"./WineDescription.json";
         string ReadText = File.ReadAllText(FilePath);
@@ -28,10 +30,10 @@ public class Program
         do
         {
             Console.WriteLine("Please choose from menu options:");
-            Console.WriteLine("1. Add wine to inventory file");
-            Console.WriteLine("2. Select wine from inventory file");
-            Console.WriteLine("3. Inventory current status");
-            Console.WriteLine("4. Exit \n");
+            Console.WriteLine(" 1. Inventory current status");
+            Console.WriteLine(" 2. Select wine from inventory file");
+            Console.WriteLine(" 3. Add a wine to inventory file");
+            Console.WriteLine(" 4. Exit \n");
             menuchoice = Console.ReadLine();
 
             
@@ -39,7 +41,7 @@ public class Program
             Console.WriteLine("\nYou have chosen menu option #" + menuchoice);
                     
 
-            if (menuchoice == "3")
+            if (menuchoice == "1")
             {
                 ReadText = File.ReadAllText(FilePath);
                 Console.WriteLine(ReadText);
@@ -67,7 +69,7 @@ public class Program
                     }
                 }
             }
-            else if (menuchoice == "1")
+            else if (menuchoice == "3")
             {
                 Class1 item = new Class1();
 
@@ -85,8 +87,8 @@ public class Program
 
                 Console.WriteLine("Please enter Price");
                 item.Price = Console.ReadLine();
-
-                inventory.Add(item);//Adds a new wine to json file and shows in inventory list on next inventory status
+                //Adds a new wine to json file and shows in inventory list on next inventory status
+                inventory.Add(item);
                 System.Text.Json.JsonSerializerOptions options = new System.Text.Json.JsonSerializerOptions();
                 options.WriteIndented = true;
                 var json = System.Text.Json.JsonSerializer.Serialize<List<Class1>>(inventory, options);

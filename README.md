@@ -1,7 +1,7 @@
 # Rosewinery
 Rosewinery wines inventory tracking tool
 
-This console application is intended to help the user to track the inventory of 5 sorts of wines. The user can add a wine, select to review a wine by name, pull the inventory status and Exit. The wines list is stored in json file that can be retrieved by Select option that pulls a list of current inventory. For any invalid choice, the error is logged to Errors.txt file 
+This console application is intended to help the user to track the inventory of 5 sorts of wines as an owner of Rosewinery boutique. The user can add a wine, select to review a wine by name, pull the inventory status and Exit. The wines list is stored in json file that can be retrieved by Select option that pulls a list of current inventory. For any invalid choice, the error is logged to Errors.txt file 
 
 Feature requirements implemented in this project:
 1) Implement a "master loop" console application where the user can repeatedly enter commands/perform actions, including choosing to exit the program.
