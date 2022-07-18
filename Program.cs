@@ -29,7 +29,7 @@ public class Program
         string menuchoice;
         do
         {
-            Console.WriteLine("Please choose from menu options:");
+            Console.WriteLine("\nPlease choose from menu options:");
             Console.WriteLine(" 1. Inventory current status");
             Console.WriteLine(" 2. Select wine from inventory file");
             Console.WriteLine(" 3. Add a wine to inventory file");
