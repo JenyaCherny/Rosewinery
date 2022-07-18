@@ -36,7 +36,7 @@ public class Program
 
             
 
-            Console.WriteLine("\n You have chosen menu option #" + menuchoice);
+            Console.WriteLine("\nYou have chosen menu option #" + menuchoice);
                     
 
             if (menuchoice == "3")
@@ -47,7 +47,12 @@ public class Program
             }
             else if (menuchoice == "2")
             {
-                Console.WriteLine("Please choose Wine Name");
+                Console.WriteLine("Please choose Wine Name: " +
+                    " Malbec 2016," +
+                    " Syrah 2006," +
+                    " Chardonnay 2016," +
+                    " Cabernet Sauvignon 2016," +
+                    " Cabernet Sauvignon 2014");
                 string UserWineChoice = Console.ReadLine();
 
                 foreach (Class1 item in inventory)
