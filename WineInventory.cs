@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-public class Rootobject
+public class WineInventoryBase
 {
-    public Class1[] Wineinventory { get; set; }
+    public WineClass[] Wineinventory { get; set; }
 }
 
-public class Class1
+public class WineClass
 {
     public string WineName { get; set; }
     public string Description { get; set; }

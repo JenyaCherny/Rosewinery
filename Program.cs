@@ -25,7 +25,7 @@ public class Program
             string FilePath = @"./WineDescription.json";
         string ReadText = File.ReadAllText(FilePath);
 
-        List<Class1> inventory = System.Text.Json.JsonSerializer.Deserialize<List<Class1>>(ReadText);
+        List<WineClass> inventory = System.Text.Json.JsonSerializer.Deserialize<List<WineClass>>(ReadText);
         string menuchoice;
         do
         {
@@ -49,15 +49,16 @@ public class Program
             }
             else if (menuchoice == "2")
             {
-                Console.WriteLine("Please choose Wine Name: " +
-                    " Malbec 2016," +
-                    " Syrah 2006," +
-                    " Chardonnay 2016," +
-                    " Cabernet Sauvignon 2016," +
-                    " Cabernet Sauvignon 2014");
-                string UserWineChoice = Console.ReadLine();
+                Console.WriteLine("\nPlease choose a wine name from the current inventory list and type below: ");
+               
+                foreach (WineClass item in inventory)
+                {
+                    Console.WriteLine(item.WineName);
+                }
 
-                foreach (Class1 item in inventory)
+                    string UserWineChoice = Console.ReadLine();
+
+                foreach (WineClass item in inventory)
                 {
                     if (item.WineName == UserWineChoice)
                     {
@@ -71,7 +72,7 @@ public class Program
             }
             else if (menuchoice == "3")
             {
-                Class1 item = new Class1();
+                WineClass item = new WineClass();
 
                 Console.WriteLine("Please enter Wine Name");
                 item.WineName = Console.ReadLine();
@@ -87,11 +88,14 @@ public class Program
 
                 Console.WriteLine("Please enter Price");
                 item.Price = Console.ReadLine();
+
+                Console.WriteLine("\nYou can choose the menu option #1 to check the wine is added to current inventory");
+
                 //Adds a new wine to json file and shows in inventory list on next inventory status
                 inventory.Add(item);
                 System.Text.Json.JsonSerializerOptions options = new System.Text.Json.JsonSerializerOptions();
                 options.WriteIndented = true;
-                var json = System.Text.Json.JsonSerializer.Serialize<List<Class1>>(inventory, options);
+                var json = System.Text.Json.JsonSerializer.Serialize<List<WineClass>>(inventory, options);
                 File.WriteAllText(FilePath, json);
             }
             else if(menuchoice !="4")
