@@ -103,17 +103,7 @@ public class Program
                 Console.WriteLine("Please enter a valid menu choice: 1,2,3 or 4");
                ErrorLogging(menuchoice);
             }
-         } while (menuchoice != "4");
-
-
-      
-       
-       
-
-
-
-
-
+        } while (menuchoice != "4");
     }
 
 }
